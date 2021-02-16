@@ -11,7 +11,7 @@ domReady(function() {
     var li = currentValue.closest('li');
     var id = li.id;
     currentValue.addEventListener('click', function() {
-      fetch('goals/' + id, {
+      fetch('tasks/' + id, {
         method: 'delete'
       }).then(function(responseObj) {
         li.remove();
@@ -24,7 +24,7 @@ domReady(function() {
   addSuccessButtons.each(function(currentValue) {
     var id = currentValue.closest('li').id;
     currentValue.addEventListener('click', function() {
-      fetch('goals/' + id + '/success', {
+      fetch('tasks/' + id + '/success', {
         method: 'post'
       }).then(function(responseObj) {
         var numberOfSuccesses = u(currentValue.closest('li')).find('.successes');
@@ -38,7 +38,7 @@ domReady(function() {
   addFailureButtons.each(function(currentValue) {
     var id = currentValue.closest('li').id;
     currentValue.addEventListener('click', function() {
-      fetch('goals/' + id + '/failure', {
+      fetch('tasks/' + id + '/failure', {
         method: 'post'
       }).then(function(responseObj) {
         var numberOfFailures = u(currentValue.closest('li')).find('.failures');

@@ -1,10 +1,10 @@
 <!-- Form to POST new goals -->
 <div class="content-grid mdl-grid">
   <div class="mdl-cell mdl-cell--12-col">
-    <form action="/goals" method="POST" class="submit">
+    <form action="/tasks" method="POST" class="submit">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="add-goal" name="description">
-        <label class="mdl-textfield__label" for="add-goal">New goal</label>
+        <label class="mdl-textfield__label" for="add-goal">New task</label>
       </div>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Submit</button>
     </form>
@@ -13,7 +13,7 @@
 
 {{!-- Current goals --}}
 <ul class="goals-list content-grid mdl-grid">
-  {{#each goals}}
+  {{#each tasks}}
   <li id="{{_id}}" class="mdl-card mdl-cell mdl-shadow--2dp">
 
     {{!-- Heading --}}

@@ -1,7 +1,7 @@
 # To-Do Application
 A simple to-do application
 ---
-### Version
+## Version
 1.0.0
 ---
 ## Technology used:

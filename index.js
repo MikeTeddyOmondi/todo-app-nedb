@@ -7,9 +7,7 @@ const app = express()
 
 // To read POST data, we use the body-parser middleware.
 app.use(body.json())
-app.use(body.urlencoded({
-  extended: true
-}))
+app.use(body.urlencoded({ extended: true }))
 
 // Tell the app that the templating engine is Handlebars.
 app.engine('handlebars',
@@ -30,9 +28,12 @@ app.use('/css/material.min.css', express.static(__dirname + '/node_modules/mater
 
 // Routes
 app.use('/', require('./routes/index.routes.js'))
+//app.use('/tasks', require('./routes/tasks.routes.js'))
 
 let PORT = process.env.PORT || 5000
 
 app.listen(PORT, (err) => {
+	console.log('________________________________')
 	console.log(`Server listening on port:${PORT}`)
+  console.log('________________________________')
 })
