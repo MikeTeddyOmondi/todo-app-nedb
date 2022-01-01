@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.2.10",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.19.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "lowdb": "^1.0.0",
